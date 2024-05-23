@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location d'Appartements</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="home-button"><i class="fas fa-home"></i></a>
+        <h1>Location d'Appartements</h1>
+    </header>
+    <main>
+        <section class="apartment-list">
+            <h2>Nos appartements disponibles</h2>
+            <div class="apartment">
+                <img src="img/apartment1.jpg" alt="Appartement 1">
+                <h3>Appartement en Centre-ville</h3>
+                <p>À partir de 100€ par nuit</p>
+                <p>Cet appartement en plein centre-ville est parfait pour des vacances en famille ou entre amis. Il dispose de deux chambres, d'une cuisine entièrement équipée et d'un salon spacieux.</p>
+                <a href="details1.html">Voir les détails</a>
+            </div>
+            <div class="apartment">
+                <img src="img/apartment2.jpg" alt="Appartement 2">
+                <h3>Appartement Proche de la Plage</h3>
+                <p>À partir de 120€ par nuit</p>
+                <p>Cet appartement proche de la plage offre une vue imprenable sur la mer. Idéal pour les amoureux de la mer, il dispose d'une terrasse privée et d'un accès direct à la plage.</p>
+                <a href="details2.html">Voir les détails</a>
+            </div>
+            <div class="apartment">
+                <img src="img/apartment3.jpg" alt="Appartement 3">
+                <h3>Loft Moderne</h3>
+                <p>À partir de 150€ par nuit</p>
+                <p>Ce loft moderne est situé en plein cœur de la ville. Avec ses grandes fenêtres et son design élégant, il offre une expérience de vie urbaine luxueuse.</p>
+                <a href="details3.html">Voir les détails</a>
+            </div>
+            <div class="apartment">
+                <img src="img/apartment4.jpg" alt="Appartement 4">
+                <h3>Maison de Campagne</h3>
+                <p>À partir de 80€ par nuit</p>
+                <p>Cette charmante maison de campagne est parfaite pour une escapade tranquille. Nichée au milieu de la nature, elle offre un cadre paisible pour se détendre et se ressourcer.</p>
+                <a href="details4.html">Voir les détails</a>
+            </div>
+        </section>
+    </main>
+    <section class="confirmation-message" style="display: none;">
+        <h2>Merci pour votre réservation !</h2>
+        <p>Votre réservation a bien été enregistrée. Nous vous contacterons sous peu pour confirmer les détails.</p>
+    </section>
+    <script>
+        // Script pour afficher le message de confirmation après la réservation
+        const reservationForm = document.querySelector('.reservation-form');
+        const confirmationMessage = document.querySelector('.confirmation-message');
+
+        reservationForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Empêche l'envoi du formulaire
+            confirmationMessage.style.display = 'block'; // Affiche le message de confirmation
+            reservationForm.reset(); // Réinitialise le formulaire
+        });
+    </script>
+</body>
+</html>
